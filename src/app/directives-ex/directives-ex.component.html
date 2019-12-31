@@ -1,0 +1,27 @@
+<div>
+<h1 [ngClass]="{'blue1': color1 == 1 , 'red1' : color1 == 0, 'green1' : color1 ==3}"> ANGULAR NGCLASS DIRECTIVE </h1>
+<button (click)="changeMe()"> change text </button>
+</div>
+
+
+<div>
+    <h1 appDirective1> directive 1 </h1>
+</div>
+
+<div>
+    <h1 appDirective2 [customColor]="'yello-w'"> directive 3 </h1>
+</div>
+
+<div  appDirective3 [customColor]="userColor" [hoverColor]="'blue'"  >
+    <h1> directive 3 </h1>
+</div>
+
+
+<div  appDirective3 [customColor]="'red'" [hoverColor]="'blue'"  >
+    <h1> directive 3 </h1>
+</div>
+
+
+
+<input type="color" #col (change)="selectColor(this.col.value)" />
+ <button (click)="selectColor(this.col.value)" > change </button>
